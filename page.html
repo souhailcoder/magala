@@ -1,10 +1,8 @@
-<link href='https://fonts.googleapis.com/css?family=Cairo:600' rel='stylesheet'/>
 
 <style>
 h2 {
     color: red;
     font-size: 27px;
-    font-family: 'Cairo', sans-serif;
 }
 .starf {
     color: #3F51B5;
@@ -13,24 +11,23 @@ h2 {
 .star2 {
     color: red;
     font-size: 20px;
-    font-family: 'Cairo', sans-serif;
 }
 body {
     direction: rtl;
     font-size: 16px;
-    font-family: 'Cairo', sans-serif;
 }
 a, a:visited {
     text-decoration: none;
 }
 #toc_container {
-    background: #f9f9f9 none repeat scroll 0 0;
-    border: 1px solid #aaa;
+background: #f9f9f9 none repeat scroll 0 0;
+    border: 1px solid #aaaaaa9e;
     display: table;
-    font-size: 95%;
+    font-size: 13px;
     margin-bottom: 1em;
-    padding: 20px;
+    padding: 6px;
     width: auto;
+    border-radius: 5px;
 }
 
 .toc_title {
@@ -49,7 +46,10 @@ a, a:visited {
 <div class="toc_page">
 <div id="toc_container">
 <p class="toc_title">فهرس الصفحة</p>
+        <p class="toc_title"> [<a href='javascript:void(null)' class='toc_list' onclick='hideTOC()'>إخفاء الفهرس</a><a href='javascript:void(null)' id='showTOC' style="display:none;" onclick='showTOC()'>إظهار الفهرس</a>]</p>
+
 <ul class="toc_list">
+
 
 <li><a href="#First_Point_Header">1 الاهتمام بالمعلومات والمعاني الطبيه </a>
     <ul>
@@ -77,19 +77,22 @@ a, a:visited {
 </ul>
 </div>
 
-
 <div class='starf'>ماهي ملفات تعريف الإرتباط Cookies؟ وكيفية السيطرة عليها في جميع المتصفحات! </div>
-<br>
+
 <h2 id="First_Point_Header">الاهتمام بالمعلومات والمعاني الطبيه </h2>
-الاهتمام بالمعلومات والمعاني الطبيه
 الاهتمام بالمعلومات والمعاني الطبيهالاهتمام بالمعلومات والمعاني الطبيهالاهتمام بالمعلومات والمعاني الطبيه
+
+<br>
 <div class='star2' id="First_Sub_Point_2">الاهتمام بالمعلومات والمعاني الطبيه </div>
+
 الاهتمام بالمعلومات والمعاني الطبيه الاهتمام بالمعلومات والمعاني الطبيه الاهتمام بالمعلومات والمعاني الطبيه 
 الاهتمام بالمعلومات والمعاني الطبيه vالاهتمام بالمعلومات والمعاني الطبيه الاهتمام بالمعلومات والمعاني الطبيه 
+
 <br>
 <h2 id="First_Point_Header">الاهتمام بالمعلومات والمعاني الطبيه </h2>
 الاهتمام بالمعلومات والمعاني الطبيه الاهتمام بالمعلومات والمعاني الطبيه الاهتمام بالمعلومات والمعاني الطبيه 
 الاهتمام بالمعلومات والمعاني الطبيه vالاهتمام بالمعلومات والمعاني الطبيه الاهتمام بالمعلومات والمعاني الطبيه 
+
 <br>
 <br>
 <div class='star2' id="First_Sub_Point_2">الاهتمام بالمعلومات والمعاني الطبيه </div>
@@ -101,3 +104,24 @@ a, a:visited {
 <li> الاهتمام بالمعلومات والمعاني الطبيه </li>
 
 </div>
+
+
+
+
+
+    <script>
+    var hideTOC = function(){
+        var hideThese = document.getElementsByClassName("toc_list");
+        for (var i = 0; i < hideThese.length; i++){
+            hideThese[i].style.display = "none";
+        }
+        document.getElementById("showTOC").style.display = "";
+    }
+    var showTOC = function(){
+        var showThese = document.getElementsByClassName("toc_list");
+        for (var i = 0; i < showThese.length; i++){
+            showThese[i].style.display = "";
+        }
+        document.getElementById("showTOC").style.display = "none";
+    }
+    </script>
